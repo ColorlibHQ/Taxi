@@ -241,10 +241,6 @@ class Epsilon_Dashboard_Setup {
 				'integration' => true,
 				'recommended' => false,
 			),
-			'taxi' => array(
-				'integration' => true,
-				'recommended' => false,
-			),
 			'elementor' => array(
 				'integration' => true,
 				'recommended' => false,
@@ -266,7 +262,6 @@ class Epsilon_Dashboard_Setup {
 
 		if ( ! $integrated ) {
 			unset( $arr['contact-form-7'] );
-			unset( $arr['taxi'] );
 			unset( $arr['elementor'] );
 			unset( $arr['one-click-demo-import'] );
 		}
@@ -296,21 +291,6 @@ class Epsilon_Dashboard_Setup {
 						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ) ? __( 'Activate Plugin', 'taxi' ) : __( 'Install Plugin', 'taxi' ),
 						'type'    => 'handle-plugin',
 						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ),
-					),
-				),
-			),
-			array(
-				'id'          => 'taxi-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'title', 'taxi Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'description', 'taxi Companion' ),
-				'plugin_slug' => 'taxi',
-				'state'       => false,
-				'check'       => defined( 'TAXI_COMPANION_VERSION' ),
-				'actions'     => array(
-					array(
-						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'installed', 'taxi Companion' ) ? __( 'Activate Plugin', 'taxi' ) : __( 'Install Plugin', 'taxi' ),
-						'type'    => 'handle-plugin',
-						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'installed', 'taxi Companion' ),
 					),
 				),
 			),
@@ -368,13 +348,6 @@ class Epsilon_Dashboard_Setup {
 				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'description', 'Contact Form 7', 'verify_cf7' ),
 				'plugin_slug' => 'contact-form-7',
 				'check'       => defined( 'WPCF7_VERSION' ),
-			),
-			array(
-				'id'          => 'taxi-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'title', 'taxi Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'taxi', 'description', 'taxi Companion' ),
-				'plugin_slug' => 'taxi',
-				'check'       => defined( 'TAXI_COMPANION_VERSION' ),
 			),
 			array(
 				'id'          => 'taxi-check-elementor',

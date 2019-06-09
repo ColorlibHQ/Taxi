@@ -54,7 +54,8 @@ Epsilon_Customizer::add_field(
 	'taxi_header_top_pattern_bg',
 	array(
 		'type'        => 'epsilon-image',
-		'label'       =>  esc_html__( 'Header Top Background Pattern', 'taxi' ),
+        'label'       => esc_html__( 'Header Top Pattern', 'taxi' ),
+        'description' => esc_html__( 'Upload header top pattern image, Suggestion image size width 1920px height 30px', 'taxi' ),
 		'section'     => 'taxi_headertop_options_section',
 		'sanitize_callback' => 'sanitize_text_field',
 		'default'     => '',

@@ -23,23 +23,13 @@ if( ! defined( 'ABSPATH' ) ) {
 
 		/**
 		 * Blog Post Meta
-		 * @Hook  taxi_blog_posts_meta
+		 * @Hook  taxi_blog_single_meta
 		 *
-		 * @Hooked taxi_blog_posts_meta_cb
-		 *
+		 * @Hooked taxi_blog_single_meta_cb
 		 *
 		 */
-		do_action( 'taxi_blog_posts_meta' );
+		do_action( 'taxi_blog_single_meta' );
 
-		/**
-		 * Blog Excerpt With read more button
-		 * @Hook  taxi_blog_posts_bottom_meta
-		 *
-		 * @Hooked taxi_blog_posts_bottom_meta_cb
-		 *
-		 *
-		 */
-		do_action( 'taxi_blog_posts_bottom_meta' );
 		?>
     </div>
     <div class="col-lg-9 col-md-9 blog-content">
