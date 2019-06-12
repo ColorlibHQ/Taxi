@@ -70,6 +70,11 @@ if( ! defined( 'TAXI_COMPANION_DD_DIR_URL' ) ) {
     define( 'TAXI_COMPANION_DD_DIR_URL', TAXI_COMPANION_INC_DIR_URL . 'demo-data/' );
 }
 
+// Define Meta dir url constant
+if( ! defined( 'TAXI_COMPANION_META_DIR_URL' ) ) {
+    define( 'TAXI_COMPANION_META_DIR_URL', TAXI_COMPANION_INC_DIR_URL . 'taxi-meta/' );
+}
+
 
 
 $current_theme = wp_get_theme();

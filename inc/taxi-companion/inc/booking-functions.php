@@ -15,12 +15,11 @@ if( ! defined( 'WPINC' ) ) {
 add_action( 'admin_enqueue_scripts', 'carrentals_booking_scripts' );
 function carrentals_booking_scripts() {
 
-    wp_enqueue_style( 'booking-style', plugins_url( '../css/booking.css', __FILE__ ), array(), '1.0', false );
+    wp_enqueue_style( 'booking-style', TAXI_COMPANION_DIR_URL .'css/booking.css', array(), '1.0', false );
 
-    wp_enqueue_script( 'repeater-script', plugins_url( '../js/repeater.js', __FILE__ ), array('jquery'), '1.0', true );
-    wp_enqueue_script( 'booking-script', plugins_url( '../js/booking.js', __FILE__ ), array('jquery'), '1.0', true );
+    wp_enqueue_script( 'repeater-script', TAXI_COMPANION_DIR_URL .'js/repeater.js', array('jquery'), '1.0', true );
+    wp_enqueue_script( 'booking-script', TAXI_COMPANION_DIR_URL .'js/booking.js', array('jquery'), '1.0', true );
 }
-
 
 // Register car booking post type
 function carrentals_custom_init() {

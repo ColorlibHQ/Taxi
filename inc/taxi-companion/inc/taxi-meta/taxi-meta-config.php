@@ -14,8 +14,8 @@ if( !defined( 'WPINC' ) ){
     // Taxi meta scripts enqueue
     add_action( 'admin_enqueue_scripts', 'taxi_meta_scripts' );
     function taxi_meta_scripts() {
-        wp_enqueue_style( 'taxi-meta-style', plugins_url( 'assets/css/taxi-meta.css', __FILE__ ) );
-        wp_enqueue_script( 'taxi-meta-script', plugins_url( 'assets/js/taxi-meta.js', __FILE__ ), array('jquery'), '1.0', true );
+        wp_enqueue_style( 'taxi-meta-style', TAXI_COMPANION_META_DIR_URL. 'assets/css/taxi-meta.css' );
+        wp_enqueue_script( 'taxi-meta-script', TAXI_COMPANION_META_DIR_URL. 'assets/js/taxi-meta.js', array('jquery'), '1.0', true );
     }
 
     // Page Header select option meta

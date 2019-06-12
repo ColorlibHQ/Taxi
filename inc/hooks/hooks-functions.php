@@ -50,10 +50,10 @@ if( ! function_exists( 'taxi_footer_area' ) ) {
 
 		$footerWidget = taxi_opt( 'taxi-widget-toggle-settings', false );
 
-		$noWidgets = ! empty( $footerWidget ) ? '' : ' no-widgets';
+		$noWidgets = ! empty( $footerWidget ) ? 'footer-area section-gap' : ' no-widgets';
 
 		if( ! is_404() ) {
-			echo '<footer class="footer-area section-gap'.esc_attr( $noWidgets ).'">';
+			echo '<footer class="'.esc_attr( $noWidgets ).'">';
 
 			// Footer widget
 
