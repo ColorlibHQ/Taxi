@@ -71,6 +71,14 @@ if( ! defined( 'TAXI_DIR_PATH_WIDGET' ) ) {
 
 
 
+// Admin Enqueue script
+function taxi_admin_script(){
+    wp_enqueue_style( 'taxi-admin', get_template_directory_uri().'/assets/css/taxi_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'taxi_admin', get_template_directory_uri().'/assets/js/taxi_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'taxi_admin_script' );
+
+
 
 /**
  * Include File
